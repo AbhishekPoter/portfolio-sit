@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>personal portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/c441a1aa5d.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/cc.png" class="logo">
+                <ul class="newmenu" id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Service</a></li>
+                    <li><a href="#portfolio">Project</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="aa fa-sharp fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class=" aa fa-sharp fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <!-- <p>UI/UX Desinger</p> -->
+                <h1>Hi, I'm <span>Abhishek</span><br> Poter </h1>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <!-- -----------about--------------- -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/b.jpg">
+                </div>
+                <div class="about-col-2">
+                    <!-- <h1 class="sub-title">About Me</h1> -->
+                    <p>
+                        A sophomore of ANDROID APP DEVELOPMENT in Java environment and Web Devlopment, still to achieve
+                        the impossible. Freelancing my proficiency in JDK environment.
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skill</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Coding Languages</span><br>C, C++, Python, Java,
+                                <br> HTML, CSS, JavaScript, jQuery, SQL
+                            </li>
+                            <li><span>DSA</span><br>Data Structures and Algorithms</li>
+                            <li><span>Web Devlopment</span><br>WebDevlopment</li>
+                            <li><span>Another</span><br>MS Excel, Critical thinking, Team work, Endurance, Hard
+                                work,<br> Smart work, Innovative teaching</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Teaching</span><br>Mathematics</li>
+                            <li><span>Project</span><br>WebDevlopment ,<br> Tic-Tac-Toe using C++</li>
+                            <!-- <li><span>Manager</span><br>WebDevlopment</li> -->
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>10th</span><br>RBSE 89% <br>
+                                ( got 100% marks in Mathematics and Science )</li>
+                            <li><span>12th</span><br>RBSE 92%<br>
+                                ( PCM% 97 and got 100% marks in Mathematics)</li>
+                            <li><span>Graduation</span><br>B.Sc. 77% <br>( University of Kota )</li>
+                            <li><span>Master of Science</span><br>Mathematics & Computing From
+                                IIT(ISM)-Dhanbad<br>(currently pursuing)</li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- -------------------services---------------- -->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2><b>Web Desinger</b></h2>
+                    <p>Web design refers to the design of websites that are displayed on the internet. It usually refers
+                        to the user experience aspects of website development rather than........
+                    </p>
+                    <a href="webdesinging.html">Learn more</a>
+                </div>
+                <!-- <div>
+                    <i class="fa-solid fa-crop"></i>
+                    <h2>UI Desinger</h2>
+                    <p>adf dfsafjhhds .,s sadfjaif df kfhsuahfh jdhf
+                        sfhadfjh fuashfdas sdff s dsf
+                        dshfdfusehrfusddsaf d df d fds saffef
+                        dfhfj dfkjh shjfksd m, .
+                    </p>
+                    <a href="#">Learn more</a>
+                </div> -->
+                <div>
+                    <i class="fa-brands fa-app-store-ios"></i>
+                    <h2><b>App Desinger</b></h2>
+                    <p>Toolkits, templates, and apps can be built within App Designer. And thanks to the low-code app
+                        building experience inside App Designer, automating business tasks has never been easier........
+                    </p>
+                    <a href="appdesingner.html">Learn more</a>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    <!-- // ----------------------portfolio-------------- -->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/work-1.png">
+                    <div class="layer">
+                        <h3>Web Devlopment</h3>
+                        <p>In this Project I design a Complete Responsive Website using Html, CSS and JavaScript
+                        </p>
+                        <a href="project1.html"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/tu.jpg">
+                    <div class="layer">
+                        <h3> Tic Tac Toe</h3>
+                        <p>In this Project I design a Tic Tac Toe game on cmd using C++
+                        </p>
+                        <a href="project2.html"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <!-- <div class="work">
+                <img src="images/work-3.png">
+                <div class="layer">
+                    <h3>Web App</h3>
+                    <p>it helps people to learn facebook and many more thing in th;is world 
+                        shuch that space and movies.
+                    </p>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div> -->
+            </div>
+            <a href="#" class="btn">See more</a>
+
+        </div>
+    </div>
+    <!-- --------------contact------------------->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-titlec sub-title ">Contact me</h1>
+                    <p><i class="fa-sharp fa-solid fa-envelope"></i> abhishekpoter1999@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i>7734011093</p>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/abhishek-poter-06307b249/" target="_blank"><i
+                                class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/AbhishekPoter" target="_blank"><i
+                                class="fa-brands fa-square-github"></i></a>
+                        <a href="https://www.instagram.com/poterabhi/" target="_blank"><i
+                                class="fa-brands fa-instagram"></i></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=100055916014666" target="_blank"><i
+                                class="fa-brands fa-square-facebook"></i></a>
+
+                    </div>
+                    <a href="pdf.html" target="_blank" class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="name" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Massage" rows="6" placeholder="Your Massage"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="copyright">
+            <p>
+                Copyright @ Abhi. Made By abhi
+            </p>
+        </div>
+    </div>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname) {
+            for (tablin of tablinks) {
+                tablin.classList.remove("active-link");
+            }
+            for (tabconten of tabcontents) {
+                tabconten.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+    </script>
+    <script>
+        var sidemen = document.getElementById("sidemenu");
+        function openmenu() {
+            sidemen.style.right = "0";
+        }
+        function closemenu() {
+            sidemen.style.right = "-200px";
+        }
+    </script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbw31p21h__Ey4D-pfjfQeX4DIvABi1Rs30kviGr8yZT9O7t0F6ygtHoAogqYxytiH1T/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    msg.innerHTML = " Massage sent successfully"
+                    setTimeout(function () {
+                        msg.innerHTML = ""
+                    }, 5000)
+                    form.reset()
+                })
+                .catch(error => console.error('Error!', error.message))
+        })
+    </script>
+
+</body>
+
+</html>

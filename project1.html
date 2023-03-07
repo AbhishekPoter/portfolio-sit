@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Work</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/c441a1aa5d.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="header2">
+        <div class="container">
+            <nav>
+                <img src="images/cc.png" class="logo">
+                <ul class="newmenu" id="sidemenu">
+                    <li><a href="index.html#header">Home</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#services">Service</a></li>
+                    <li><a href="index.html#portfolio">Project</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="aa fa-sharp fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class=" aa fa-sharp fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="web">
+                <h1 class="sub-title"><span class="colorff">P</span>roject: <br> Portfolio Website</h1>
+                <h2>Languages: </h2><br><p class="fontss">HTML, CSS, JavaScript.</p>
+                <br><br>
+                <h2>Discription:</h2>
+                <br><br>
+                <p>-In this Project I design a Portpholio Website using Html, CSS and JavaScript.
+                    <br><br>-this Website is full Responsive and optimized for small screens also.
+                    <br><br>-this Website has mulltiple pages.
+                    <br><br>-To make look good there is used maney hover effect. 
+                    <br><br>-There is a Contact me section in this section user can give input <br>
+                    and all the user data hendeled in backend.
+                    <br><br>-In this Website C++ compiler also shown.
+                </p>
+            <div class="project1">
+                <a href="index.html#header" class="btn">See Project</a>
+            </div>
+
+            </div>
+
+
+
+        </div>
+
+
+    </div>
+    <!-- --------------contact------------------->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-titlec sub-title ">Contact me</h1>
+                    <p><i class="fa-sharp fa-solid fa-envelope"></i> abhishekpoter1999@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i>7734011093</p>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/abhishek-poter-06307b249/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/AbhishekPoter" target="_blank"><i class="fa-brands fa-square-github"></i></a>
+                        <a href="https://www.instagram.com/poterabhi/" target="_blank"><i class="fa-brands fa-instagram"></i></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=100055916014666" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
+                    </div>
+                    <a href="pdf.html"  target="_blank" class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="name" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Massage" rows="6" placeholder="Your Massage"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form><span id="msg"></span>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="copyright">
+            <p>
+                Copyright @ Abhi. Made By abhi
+            </p>
+        </div>
+    </div>
+
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbw31p21h__Ey4D-pfjfQeX4DIvABi1Rs30kviGr8yZT9O7t0F6ygtHoAogqYxytiH1T/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML= " Massage sent successfully"
+                setTimeout(function(){
+                    msg.innerHTML=""
+                },5000)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+       <script>
+        var sidemen= document.getElementById("sidemenu");
+        function openmenu(){
+            sidemen.style.right="0";
+        }
+        function closemenu(){
+            sidemen.style.right="-200px";
+        }
+    </script>
+</body>
+
+</html>

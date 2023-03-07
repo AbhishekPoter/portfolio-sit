@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/c441a1aa5d.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="header2">
+        <div class="container">
+            <nav>
+                <img src="images/cc.png" class="logo">
+                <ul class="newmenu" id="sidemenu">
+                    <li><a href="index.html#header">Home</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#services">Service</a></li>
+                    <li><a href="index.html#portfolio">Project</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="aa fa-sharp fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class=" aa fa-sharp fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="web">
+                <h1 class="sub-title"><span class="colorff">A</span>pp Designer </h1>
+                <p>Toolkits, templates, and apps can be built within App Designer. And thanks to the low-code app
+                    building experience inside App Designer, automating business tasks has never been
+                    easier.<br><br><br>
+                    For users familiar with building process applications with Process Designer from Business Automation
+                    Workflow, you will be comfortable building apps with App Designer, since many of the same concepts
+                    are the same between both designers. For more information about building applications in Business
+                    Automation Workflow, see Creating process applications.<br><br><br>
+                    App Designer comes equipped with two view modes:<br><br>
+                    - Basic: A simplified app design experience. The left navigation pane and other properties views are
+                    hidden.<br>
+                    -Advanced: A more robust app design experience for technical users. Access the left navigation pane
+                    and more properties.
+                
+                </p>
+
+            </div><div class="web">
+                <h1 class="sub-title">How to build a simple app</h1><br>
+                <p id="appp">To put together a simple app, follow these steps.<br>
+                <br>-Base your app on a starting app or template that is provided to you.
+                <br>-Construct your pages. Create a page and add the building blocks (views) that you want on the page. For example, add a button view or a text input view. Associate data with the view, if needed. Configure properties for the views, such as color.
+                <br>-Configure next steps to move between pages. For example, add a next step for a button that a user clicks to move to another page.
+                <br>-Test your app.
+                <br>-Take a snapshot of your app.
+                <br>-Publish your app.
+                <br>-If your provider updates the template, update your app.
+            
+            </p>
+
+        </div>
+
+
+
+
+        </div>
+       
+
+
+
+    </div>
+
+
+    </div>
+    <!-- --------------contact------------------->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-titlec sub-title ">Contact me</h1>
+                    <p><i class="fa-sharp fa-solid fa-envelope"></i> abhishekpoter1999@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i>7734011093</p>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/abhishek-poter-06307b249/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/AbhishekPoter" target="_blank"><i class="fa-brands fa-square-github"></i></a>
+                        <a href="https://www.instagram.com/poterabhi/" target="_blank"><i class="fa-brands fa-instagram"></i></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=100055916014666" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
+                    </div>
+                    <a href="pdf.html" target="_blank" class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="name" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Massage" rows="6" placeholder="Your Massage"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form><span id="msg"></span>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="copyright">
+            <p>
+                Copyright @ Abhi. Made By abhi
+            </p>
+        </div>
+    </div>
+
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbw31p21h__Ey4D-pfjfQeX4DIvABi1Rs30kviGr8yZT9O7t0F6ygtHoAogqYxytiH1T/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML= " Massage sent successfully"
+                setTimeout(function(){
+                    msg.innerHTML=""
+                },5000)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+       <script>
+        var sidemen= document.getElementById("sidemenu");
+        function openmenu(){
+            sidemen.style.right="0";
+        }
+        function closemenu(){
+            sidemen.style.right="-200px";
+        }
+    </script>
+</body>
+
+</html>
